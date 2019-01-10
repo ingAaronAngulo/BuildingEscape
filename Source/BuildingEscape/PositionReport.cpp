@@ -21,7 +21,7 @@ void UPositionReport::BeginPlay()
 
 	//Start or Awake method
 	FString fName = GetOwner()->GetName();
-	GetOwner()->SetActorScale3D(FVector(2,2,2));
+	GetOwner()->SetActorScale3D(FVector(1,1,1));
 	FString ObjectPos = GetOwner()->GetTransform().GetLocation().ToString();
 	UE_LOG(LogTemp, Error, TEXT("Insane text from a %s, located at %s"), *fName, *ObjectPos);
 	
@@ -34,5 +34,6 @@ void UPositionReport::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	//Update method
+
 }
 
